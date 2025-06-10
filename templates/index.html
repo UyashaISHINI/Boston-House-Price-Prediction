@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Prediction</title>
+</head>
+<body>
+
+    <h2>Enter Housing Data for Prediction</h2>
+    <form action="/predict" method="post">
+        <label>Crime Rate:
+            <input type="number" step="any" name="Crime Rate" required>
+        </label><br>
+
+        <label>Residential Proportion:
+            <input type="number" step="any" name="Residential Proportion" required>
+        </label><br>
+
+        <label>Non-retail Business Acres/Town:
+            <input type="number" step="any" name="non-retail business acres/Town" required>
+        </label><br>
+
+        <label>Charles River (0 or 1):
+            <input type="number" step="any" name="Charles River" required>
+        </label><br>
+
+        <label>NO2 Concentration:
+            <input type="number" step="any" name="NO2 concentration" required>
+        </label><br>
+
+        <label>Average Rooms/Dwelling:
+            <input type="number" step="any" name="Average Rooms/Dwelling." required>
+        </label><br>
+
+        <label>Prior Built Units Proportion:
+            <input type="number" step="any" name="Prior Built Units Proportion" required>
+        </label><br>
+
+        <label>Distance to Employment Centres:
+            <input type="number" step="any" name="Distance to Employment Centres" required>
+        </label><br>
+
+        <label>Radial Highways Distance:
+            <input type="number" step="any" name="Radial Highways Distance" required>
+        </label><br>
+
+        <label>Value Property/Tax Rate:
+            <input type="number" step="any" name="ValueProperty/tax rate" required>
+        </label><br>
+
+        <label>Teacher/Town:
+            <input type="number" step="any" name="Teacher/town	" required>
+        </label><br>
+
+        <label>blacks/town:
+            <input type="number" step="any" name="blacks/town" required>
+        </label><br>
+
+        <label>Lower Status Percent:
+            <input type="number" step="any" name="Lower Status Percent" required>
+        </label><br>
+
+        <input type="submit" value="Predict Price">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{prediction_text}}</h3>
+    {% endif%}
+
+</body>
+</html>
